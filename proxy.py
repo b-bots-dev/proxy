@@ -4,6 +4,11 @@ import requests
 app = Flask(__name__)
 
 
+@app.route('/')
+def home():
+    return 'Online'
+
+
 @app.route('/proxy_video')
 def proxy_video():
     video_url = request.args.get('url')
